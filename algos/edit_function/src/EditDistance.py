@@ -1,3 +1,4 @@
+# Code referenced from https://www.packtpub.com/big-data-and-business-intelligence/text-processing-using-nltk-python-video
 class EditDistance:
     def __init__(self):
         pass
