@@ -15,7 +15,7 @@ class Combination:
         first_observation = rdd.first()
         all_other_observations = rdd.filter(lambda row: row != first_observation)
         combinations = rdd.cartesian(all_other_observations).collect()
-        combinations.foreach(print)
+        print(combinations)
 
 
 def main():
