@@ -26,6 +26,6 @@ def main(inputFolder, outputFolder):
     wc.run(inputFolder, outputFolder)
 
 if __name__ == "__main__":
-    inputFolder = sys.argv[0]
-    outputFolder = sys.argv[1]
+    inputFolder = sys.argv[1]
+    outputFolder = sys.argv[2]
     main(inputFolder, outputFolder)
