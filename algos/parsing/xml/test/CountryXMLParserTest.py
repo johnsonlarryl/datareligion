@@ -1,8 +1,8 @@
-import unittest
 from XMLLoader import XMLLoader
 
 
-class CountryXMLParserTest(unittest.TestCase):
+
+class CountryXMLParserTest():
     def setUp(self):
         self.xml_loader = XMLLoader()
 

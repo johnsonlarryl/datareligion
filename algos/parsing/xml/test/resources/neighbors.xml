@@ -1,0 +1,4 @@
+<country>
+    <neighbor name="Costa Rica" direction="W"/>
+    <neighbor name="Colombia" direction="E"/>
+</country>
