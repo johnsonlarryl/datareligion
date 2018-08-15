@@ -6,9 +6,6 @@ class CountCores:
         print("Numbr of CPUs: " + str(multiprocessing.cpu_count()) + "\n")
         print("Current Processes; " + str(multiprocessing.current_process()) +"\n")
 
-        multiprocessing.
-
-
 if __name__ == "__main__":
     count_cores = CountCores()
     count_cores.execute()
