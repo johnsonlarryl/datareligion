@@ -58,11 +58,11 @@ class ParityComputationTest(unittest2.TestCase):
         # 00000001 01000101
         expect_parity = 0
         t0 = time.time()
-        actual_parity = self.parity_computation.compute_brute(bits)
+        actual_parity = self.parity_computation.compute_lowest_set_bit_erased(bits)
         print("Parity: " + str(actual_parity))
         t1 = time.time()
         total_time = t1 - t0
-        print("Total Execution Time - test_compute_brute_without_parity: {}".format(total_time))
+        print("Total Execution Time - test_compute_lowest_set_bit_erased_without_parity: {}".format(total_time))
         assert(expect_parity == actual_parity)
 
     def test_compute_lowest_set_bit_erased_with_parity(self):
@@ -70,11 +70,11 @@ class ParityComputationTest(unittest2.TestCase):
         # 00000001 10101100
         expect_parity = 1
         t0 = time.time()
-        actual_parity = self.parity_computation.compute_brute(bits)
+        actual_parity = self.parity_computation.compute_lowest_set_bit_erased (bits)
         print("Parity: " + str(actual_parity))
         t1 = time.time()
         total_time = t1 - t0
-        print("Total Execution Time - test_compute_brute_with_parity: {}".format(total_time))
+        print("Total Execution Time - test_compute_lowest_set_bit_erased_with_parity: {}".format(total_time))
         assert(expect_parity == actual_parity)
 
 

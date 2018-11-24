@@ -19,14 +19,21 @@ class ParityComputation:
 
         return result
 
-     def compute_lowest_set_bit_erased(self, x:int) -> int:
+    def compute_lowest_set_bit_erased(self, x:int) -> int:
         result = 0
 
         while x:
             result ^= 1
-            x&= x -1 # Drops the lowest bit of x
+            x &= x -1 # Drops the lowest bit of x
 
         return result
+
+    # def compute_lookup_cache(self, x:int) -> int:
+    #     mask_size = 16
+    #     bit_mask = 0xFFF
+    #
+    #     return (PRECOMPUTED_PARITY[x >> (3 * mask_size)])
+
 
     def sort_compute(self, bits):
         parity_bits = 0
