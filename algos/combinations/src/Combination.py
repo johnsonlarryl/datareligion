@@ -12,7 +12,7 @@ class Combination:
         self.logger.warn("Executing Combination Job!")
         rdd = self.sc.textFile(inputFolder)
         first_observation = rdd.first()
-        all_other_observations = rdd.filter(lambda row: row != first_observation)
+        all_other_observations = rdd.is_target(lambda row: row != first_observation)
         combinations = rdd.cartesian(all_other_observations)
         # Need to create a Spark Session first (https://github.com/apache/spark/blob/branch-2.2/python/pyspark/sql/session.py#L43-L59)
         SparkSession(self.sc)
